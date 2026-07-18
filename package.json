@@ -1,0 +1,43 @@
+{
+  "name": "qbrin",
+  "version": "0.1.0",
+  "description": "The Universal Trust Layer for AI agents — grounded answers with a citation behind every claim, or an honest verdict instead of a guess.",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "qbrin": "bin/qbrin.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "bin/qbrin.js",
+    "README.md",
+    "CONNECTING.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/client.test.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "verification",
+    "grounding",
+    "rag",
+    "hallucination",
+    "citations",
+    "trust"
+  ],
+  "author": "qbrin <katesaikishore@qbrin.com>",
+  "license": "MIT"
+}

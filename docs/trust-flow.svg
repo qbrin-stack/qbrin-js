@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="system-ui, -apple-system, Segoe UI, sans-serif" role="img" aria-label="A refund question flows from an AI agent into qbrin, which probes the orders API, Postgres, and the policy knowledge base; the evidence returns, qbrin verifies each claim through its gates, and returns REJECTED because a $500 refund exceeds the $300 support-manager limit.">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b5bfd" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#3b5bfd" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#27409f"/>
+      <stop offset="1" stop-color="#141a3a"/>
+    </radialGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#ffffff" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="800" height="340" rx="16" fill="#0e1430"/>
+  <rect width="800" height="340" rx="16" fill="url(#grid)"/>
+
+  <!-- question -->
+  <g opacity="0">
+    <rect x="210" y="16" width="380" height="30" rx="15" fill="rgba(120,140,255,0.10)" stroke="#8ca5ff" stroke-opacity="0.35"/>
+    <text x="400" y="36" text-anchor="middle" fill="#dfe4ff" font-size="12.5" font-weight="600">“Can a Support Manager refund $500 for order ORD-200?”</text>
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;1;0" keyTimes="0;0.02;0.06;0.9;0.94;1"/>
+  </g>
+
+  <!-- connectors -->
+  <g fill="none" stroke="url(#edge)" stroke-width="2">
+    <path d="M330,180 C280,150 240,112 172,100"/>
+    <path d="M330,180 C300,178 260,172 172,170"/>
+    <path d="M330,180 C280,210 240,248 172,240"/>
+    <path id="pA" d="M330,180 C280,150 240,112 172,100" opacity="0"/>
+    <path id="pB" d="M330,180 C300,178 260,172 172,170" opacity="0"/>
+    <path id="pR" d="M330,180 C280,210 240,248 172,240" opacity="0"/>
+    <path id="pAns" d="M510,180 C552,178 574,176 598,176" opacity="0"/>
+    <path d="M510,180 C552,178 574,176 598,176"/>
+  </g>
+
+  <!-- source nodes -->
+  <g>
+    <rect x="40" y="76" width="132" height="48" rx="10" fill="#ffffff" fill-opacity="0.045" stroke="#96a8ff" stroke-opacity="0.22"/>
+    <circle cx="60" cy="100" r="5" fill="#18b6a6"/>
+    <text x="76" y="96" fill="#e8ebff" font-size="13" font-weight="700">orders API</text>
+    <text x="76" y="112" fill="#9aa4d4" font-size="10.5" font-family="monospace">live REST</text>
+  </g>
+  <g>
+    <rect x="40" y="146" width="132" height="48" rx="10" fill="#ffffff" fill-opacity="0.045" stroke="#96a8ff" stroke-opacity="0.22"/>
+    <circle cx="60" cy="170" r="5" fill="#3b5bfd"/>
+    <text x="76" y="166" fill="#e8ebff" font-size="13" font-weight="700">Postgres</text>
+    <text x="76" y="182" fill="#9aa4d4" font-size="10.5" font-family="monospace">query-in-place</text>
+  </g>
+  <g>
+    <rect x="40" y="216" width="132" height="48" rx="10" fill="#ffffff" fill-opacity="0.045" stroke="#96a8ff" stroke-opacity="0.22"/>
+    <circle cx="60" cy="240" r="5" fill="#f2b64b"/>
+    <text x="76" y="236" fill="#e8ebff" font-size="13" font-weight="700">policy RAG</text>
+    <text x="76" y="252" fill="#9aa4d4" font-size="10.5" font-family="monospace">knowledge map</text>
+  </g>
+
+  <!-- qbrin engine -->
+  <g>
+    <rect x="330" y="80" width="180" height="200" rx="14" fill="url(#core)" stroke="#8ca5ff" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="420" y="116" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800" letter-spacing="-0.5">qbrin</text>
+    <text x="420" y="134" text-anchor="middle" fill="#aeb8ee" font-size="10" font-family="monospace">verification engine</text>
+    <line x1="348" y1="146" x2="492" y2="146" stroke="#8ca5ff" stroke-opacity="0.25"/>
+    <!-- gates -->
+    <g>
+      <rect x="348" y="156" width="144" height="26" rx="7" fill="#ffffff" fill-opacity="0.05" stroke="#96a8ff" stroke-opacity="0.18"/>
+      <text x="372" y="173" fill="#c9cff2" font-size="11" font-family="monospace">claim-token</text>
+      <path d="M357 169 l4 4 l7 -9" fill="none" stroke="#9fd91f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0">
+        <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.40;0.42;0.93;0.96"/>
+      </path>
+    </g>
+    <g>
+      <rect x="348" y="190" width="144" height="26" rx="7" fill="#ffffff" fill-opacity="0.05" stroke="#96a8ff" stroke-opacity="0.18"/>
+      <text x="372" y="207" fill="#c9cff2" font-size="11" font-family="monospace">citation verifier</text>
+      <path d="M357 203 l4 4 l7 -9" fill="none" stroke="#9fd91f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0">
+        <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.45;0.47;0.93;0.96"/>
+      </path>
+    </g>
+    <g>
+      <rect x="348" y="224" width="144" height="26" rx="7" fill="#ffffff" fill-opacity="0.05" stroke="#96a8ff" stroke-opacity="0.18"/>
+      <text x="372" y="241" fill="#c9cff2" font-size="11" font-family="monospace">typed-claim</text>
+      <path d="M357 237 l4 4 l7 -9" fill="none" stroke="#9fd91f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0">
+        <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.50;0.52;0.93;0.96"/>
+      </path>
+    </g>
+    <text x="420" y="268" text-anchor="middle" fill="#8f9ad6" font-size="9.5" font-family="monospace" letter-spacing="1">CITED · OR · ABSTAINS</text>
+  </g>
+
+  <!-- answer -->
+  <g opacity="0">
+    <rect x="600" y="120" width="176" height="112" rx="12" fill="#101634" fill-opacity="0.9" stroke="#96a8ff" stroke-opacity="0.3"/>
+    <rect x="616" y="136" width="86" height="24" rx="12" fill="rgba(255,107,95,0.18)" stroke="#ff6b5f"/>
+    <text x="659" y="152" text-anchor="middle" fill="#ff8f85" font-size="11" font-weight="800" letter-spacing="0.5">REJECTED</text>
+    <text x="616" y="184" fill="#dfe4ff" font-size="12.5">$500 exceeds the $300</text>
+    <text x="616" y="201" fill="#dfe4ff" font-size="12.5">Support-Manager limit.</text>
+    <g fill="rgba(120,140,255,0.14)" stroke="#96a8ff" stroke-opacity="0.3">
+      <rect x="616" y="210" width="24" height="15" rx="4"/><rect x="644" y="210" width="22" height="15" rx="4"/><rect x="670" y="210" width="28" height="15" rx="4"/>
+    </g>
+    <g fill="#aeb8ee" font-size="9" font-weight="700" font-family="monospace" text-anchor="middle">
+      <text x="628" y="221">API</text><text x="655" y="221">DB</text><text x="684" y="221">RAG</text>
+    </g>
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.60;0.64;0.93;0.96"/>
+  </g>
+
+  <!-- query packets: qbrin → sources -->
+  <circle r="4.5" fill="#3b5bfd" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.085;0.095;0.19;0.20;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.09;0.19;1" calcMode="linear"><mpath href="#pA"/></animateMotion>
+  </circle>
+  <circle r="4.5" fill="#3b5bfd" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.085;0.095;0.19;0.20;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.09;0.19;1" calcMode="linear"><mpath href="#pB"/></animateMotion>
+  </circle>
+  <circle r="4.5" fill="#3b5bfd" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.085;0.095;0.19;0.20;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.09;0.19;1" calcMode="linear"><mpath href="#pR"/></animateMotion>
+  </circle>
+
+  <!-- evidence packets: sources → qbrin (reverse) -->
+  <circle r="4.5" fill="#18b6a6" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.235;0.245;0.35;0.36;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="1;1;0;0" keyTimes="0;0.24;0.35;1" calcMode="linear"><mpath href="#pA"/></animateMotion>
+  </circle>
+  <circle r="4.5" fill="#3b5bfd" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.235;0.245;0.35;0.36;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="1;1;0;0" keyTimes="0;0.24;0.35;1" calcMode="linear"><mpath href="#pB"/></animateMotion>
+  </circle>
+  <circle r="4.5" fill="#f2b64b" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.235;0.245;0.35;0.36;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="1;1;0;0" keyTimes="0;0.24;0.35;1" calcMode="linear"><mpath href="#pR"/></animateMotion>
+  </circle>
+
+  <!-- verdict packet: qbrin → answer -->
+  <circle r="5" fill="#9fd91f" opacity="0">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.55;0.56;0.61;0.62;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.55;0.61;1" calcMode="linear"><mpath href="#pAns"/></animateMotion>
+  </circle>
+</svg>
