@@ -3,7 +3,7 @@
 **Retrieval tells the AI what it found. Qbrin decides whether it is safe enough to use.**
 
 <p align="center">
-  <img src="docs/trust-flow.svg" alt="How the qbrin trust layer works: it sits between an AI agent and your own sources, cycling a payment agent, a biotech agent, and a security agent. In each, the agent asks, qbrin probes your live systems and knowledge, verifies every claim, and returns a decision back to the agent — REJECTED, VERIFIED, or NEED MORE EVIDENCE." width="100%">
+  <img src="https://raw.githubusercontent.com/qbrin-stack/qbrin-js/main/docs/trust-flow.svg" alt="How the qbrin trust layer works: it sits between an AI agent and your own sources, cycling a payment agent, a biotech agent, and a security agent. In each, the agent asks, qbrin probes your live systems and knowledge, verifies every claim, and returns a decision back to the agent — REJECTED, VERIFIED, or NEED MORE EVIDENCE." width="100%">
 </p>
 
 ![license MIT](https://img.shields.io/badge/license-MIT-3b5bfd)
