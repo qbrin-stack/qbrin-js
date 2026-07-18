@@ -39,5 +39,13 @@
     "trust"
   ],
   "author": "qbrin <katesaikishore@qbrin.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://qbrin.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qbrin-stack/qbrin-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qbrin-stack/qbrin-js/issues"
+  }
 }
