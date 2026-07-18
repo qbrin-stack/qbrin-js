@@ -6,6 +6,7 @@
   <img src="https://raw.githubusercontent.com/qbrin-stack/qbrin-js/main/docs/trust-flow.svg" alt="How the qbrin trust layer works: it sits between an AI agent and your own sources, cycling a payment agent, a biotech agent, and a security agent. In each, the agent asks, qbrin probes your live systems and knowledge, verifies every claim, and returns a decision back to the agent — REJECTED, VERIFIED, or NEED MORE EVIDENCE." width="100%">
 </p>
 
+[![CI](https://github.com/qbrin-stack/qbrin-js/actions/workflows/ci.yml/badge.svg)](https://github.com/qbrin-stack/qbrin-js/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/qbrin?color=3b5bfd&label=npm)](https://www.npmjs.com/package/qbrin)
 ![node 18+](https://img.shields.io/badge/node-18%2B-3b5bfd)
 ![types included](https://img.shields.io/badge/types-included-3b5bfd)
